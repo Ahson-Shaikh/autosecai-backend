@@ -1,24 +1,23 @@
-# Use a lightweight Node image
-FROM node:16-alpine
+# Use a Node Alpine image (or your choice)
+FROM node:18-alpine
 
-# Create app directory inside the container
+# Create work directory
 WORKDIR /app
 
-# Copy only package.json and package-lock.json first
-# (Leverage Docker layer caching)
+# Copy package.json + package-lock.json
 COPY package*.json ./
 
-# Install production dependencies
-RUN npm install --production
+# If you need dev tools for building sqlite3 from source, do:
+# RUN apk add --no-cache python3 make g++
 
-# Copy the rest of the application files
+# Install dependencies (production or dev, depending on your needs)
+RUN npm install
+
+# Copy the rest of your app
 COPY . .
 
-# Set environment variables (optional)
-ENV PORT=3000
-
-# Expose the port (for documentation only)
+# Expose the port if needed
 EXPOSE 3000
 
-# Start the server
+# Run your server
 CMD ["node", "server.js"]
