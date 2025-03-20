@@ -1,0 +1,29 @@
+{
+  "current_version": 4,
+  "migrations": [
+    {
+      "id": 1,
+      "name": "001_initial_schema.sql",
+      "description": "Initial database schema creation",
+      "applied_at": "2023-07-01T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "002_add_user_settings.sql",
+      "description": "Add user_settings table for AI configuration",
+      "applied_at": "2023-08-15T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "003_add_ollama_model.sql",
+      "description": "Add ollama_model column to user_settings table",
+      "applied_at": "2023-10-20T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "004_add_scan_phase.sql",
+      "description": "Add scan_phase column to scans table",
+      "applied_at": "2024-03-20T00:00:00Z"
+    }
+  ]
+} 
