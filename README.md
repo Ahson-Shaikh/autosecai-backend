@@ -40,20 +40,14 @@ npm install
 Create a `.env` file in the project root:
 
 ```
-PORT=3001
+PORT=3000
 JWT_SECRET=your_jwt_secret
 GITHUB_CLIENT_ID=your_github_client_id
 GITHUB_CLIENT_SECRET=your_github_client_secret
 SETTINGS_ENCRYPTION_KEY=your_encryption_key
 ```
 
-4. **Initialize the database**
-
-```bash
-npm run init-db
-```
-
-5. **Start the server**
+4. **Start the server**
 
 ```bash
 npm start
@@ -105,13 +99,9 @@ The backend emits the following events during scans:
 For production deployment:
 
 1. Set up environment variables for production
-2. Build the application:
+2. Start the production server:
    ```bash
-   npm run build
-   ```
-3. Start the production server:
-   ```bash
-   npm run start:prod
+   npm start
    ```
 
 ## Troubleshooting
@@ -136,4 +126,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
